@@ -1,0 +1,203 @@
+/* Statistics Styles */
+.statistics-overview {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.statistics-overview h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    grid-column: 1 / -1;
+}
+
+.statistics-overview p {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+
+.statistics-overview h3 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+/* Grid Layout */
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kartu per baris */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.rating-stats {
+    background: linear-gradient(135deg, #4158D0, #C850C0);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.rating-stats:nth-child(3n+1) {
+    background: linear-gradient(135deg, #4158D0, #C850C0);
+}
+
+.rating-stats:nth-child(3n+2) {
+    background: linear-gradient(135deg, #43E97B, #38F9D7);
+}
+
+.rating-stats:nth-child(3n+3) {
+    background: linear-gradient(135deg, #FA8BFF, #2BD2FF);
+}
+
+.rating-stats:nth-child(3n+4) {
+    background: linear-gradient(135deg, #FF3CAC, #784BA0);
+}
+
+.rating-stats:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.rating-stats h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    position: relative;
+}
+
+.rating-stats h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: rgba(255,255,255,0.8);
+}
+
+.rating-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+}
+
+.rating-count {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.progress-container {
+    background: rgba(255,255,255,0.1);
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.progress-bar {
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    transition: width 1s ease;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 20px 20px;
+    animation: progressStripes 1s linear infinite;
+}
+
+@keyframes progressStripes {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 0; }
+}
+
+/* Table Responsive Styles */
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.table-responsive-wrapper table {
+    width: 100%;
+    min-width: 800px; /* Minimum width to ensure content is readable */
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: flexible) {
+    .statistics-grid {
+        grid-template-columns: repeat(3, 1fr); /* 2 kartu per baris */
+    }
+}
+
+@media (max-width: 1400px) {
+    .statistics-overview {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .statistics-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .statistics-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .rating-stats {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,293 @@
+:root {
+  --primary: #001f3f;
+  --primary-dark: #003366;
+  --secondary: #5A6268;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--primary) !important;
+}
+
+/* Sidebar */
+.sidebar-dark-primary {
+  background: var(--primary);
+}
+.sidebar-dark-primary .brand-link {
+  background: var(--primary-dark);
+  border-bottom: none;
+}
+.nav-sidebar .nav-item .nav-link.active {
+  background: var(--primary-dark) !important;
+}
+.nav-sidebar .nav-item .nav-link:hover {
+  background: var(--primary);
+}
+
+/* Content */
+.content-wrapper {
+  background: #ffffff;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+.card-header {
+  background: var(--primary);
+  color: white;
+  border-radius: 15px 15px 0 0 !important;
+  padding: 20px;
+  border: none;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+/* Table styling */
+.table-bordered {
+  border: none;
+}
+
+.table thead th {
+  background: #f8f9fa;
+  border-bottom: 2px solid var(--primary) !important;
+  color: #2c3e50;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.table tbody td {
+  padding: 15px;
+  vertical-align: middle;
+  border-color: #f0f0f0;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 31, 63, 0.02);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 31, 63, 0.05);
+}
+
+/* DataTables styling */
+.dataTables_wrapper .dataTables_length, 
+.dataTables_wrapper .dataTables_filter {
+  margin-bottom: 20px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 31, 63, 0.25);
+  outline: none;
+}
+
+/* Buttons styling */
+.dt-buttons {
+  margin-bottom: 20px;
+}
+
+.dt-buttons .btn {
+  margin-right: 8px;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-navy {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.btn-navy:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: white;
+}
+
+/* Info Boxes */
+.info-box {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 31, 63, 0.2);
+}
+
+.info-box-icon {
+  border-radius: 10px 0 0 10px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Smooth transitions */
+.nav-link, .btn {
+  transition: all 0.3s ease;
+}
+
+/* Navbar & Sidebar custom colors */
+.navbar-navy {
+  background-color: var(--primary);
+}
+
+.sidebar-dark-navy {
+  background-color: var(--primary);
+}
+
+.sidebar-dark-navy .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: var(--primary-dark);
+}
+
+.bg-navy {
+  background-color: var(--primary) !important;
+}
+
+/* Login Page */
+.login-page {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+.login-box .card {
+  border: none;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+.login-box .card-primary.card-outline {
+  border-top: 3px solid var(--primary);
+}
+
+/* Preloader */
+.preloader {
+  background: #f4f6f9;
+}
+.animation__wobble {
+  filter: hue-rotate(120deg);
+}
+
+/* DataTables */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+  color: white !important;
+}
+.dt-buttons .btn-secondary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.dt-buttons .btn-secondary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Custom Navy Theme */
+.navbar-navy {
+    background-color: #001f3f;
+}
+
+.sidebar-dark-navy {
+    background-color: #001f3f;
+}
+
+.sidebar-dark-navy .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: #003366;
+}
+
+.bg-navy {
+    background-color: #001f3f !important;
+}
+
+/* Card styling */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,.15);
+}
+
+.info-box {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,.15);
+}
+
+/* DataTables buttons */
+.dt-buttons .btn {
+    background-color: #001f3f;
+    border-color: #001f3f;
+}
+
+.dt-buttons .btn:hover {
+    background-color: #003366;
+    border-color: #003366;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #001f3f;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #003366;
+}
+
+/* Smooth transitions */
+.nav-link, .btn {
+    transition: all 0.3s ease;
+} 
